@@ -11,14 +11,14 @@ f_radios_settings_longRangeUnits = ["leaders"]; // ["co","ftl","vc","pp"];
 
 // Set the list of units that get a personal/short-range radio e.g. "co","dc","ftl","pp"
 // Undefined will assign to ALL by default, below gives any leader a PR
-f_radios_settings_personalRadio = ["leaders","co","dc","ftl","pp","vc"];
+//f_radios_settings_personalRadio = ["leaders","co","dc","ftl","pp","vc"];
 
 // Set the list of units that get a rifleman's/basic radio
 // Undefined will assign to all by default or leave empty array for no radios.
-f_radios_settings_riflemanRadio = [];
+//f_radios_settings_riflemanRadio = [];
 
 // Set custom LR Nets if required (LR otherwise determined by 'groups.sqf').
-f_radios_settings_longRangeGroups = ["Company", "Medic"]; // "NEUTRAL" is shared in ACRE.
+f_radios_settings_longRangeGroups = ["Company"]; // "NEUTRAL" is shared in ACRE.
 
 // If a backpack is to be assigned, use this class.
 //f_radios_WESTBackpack = "tf_rt1523g_black";

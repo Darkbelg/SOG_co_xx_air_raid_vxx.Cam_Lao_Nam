@@ -91,10 +91,11 @@ f_var_AuthorUID = '76561198016469048'; // Allows GUID to access Admin/Zeus featu
 }; */
 
 f_param_safe_start = 10;
+FAR_var_SpawnInMedical = false;
 
-if (isServer) then {
+if (isServer && f_param_debugMode == 0) then {
 	spawnPlaneRandomPosition = {
-		_randomPosition = [["area1","area2","area3","area4"]] call BIS_fnc_randomPos;
+		_randomPosition = [["area1","area2"]] call BIS_fnc_randomPos;
 		[_randomPosition] execVM "mission\spawnPhantom.sqf";
 	};
 
@@ -104,7 +105,7 @@ if (isServer) then {
 		for "_i" from 0 to 4 do {
 			[] spawn spawnPlaneRandomPosition;
 			sleep 60;
-		};
+		};		
 		
 		sleep 30;
 
@@ -124,6 +125,9 @@ if (isServer) then {
 
 		sleep 120;
 
+		if (f_param_attackLength == 1 ) exitWith {
+			"End1" call BIS_fnc_endMissionServer;
+		};
 		
 		for "_i" from 0 to 4 do {
 			_randomPerson = selectRandom allPlayers;
@@ -153,6 +157,10 @@ if (isServer) then {
 
 		sleep 120;
 
+		if (f_param_attackLength == 2 ) exitWith {
+			"End1" call BIS_fnc_endMissionServer;
+		};
+
 		for "_i" from 0 to 4 do {
 			[] spawn spawnPlaneRandomPosition;
 			sleep 10;
@@ -175,4 +183,12 @@ if (isServer) then {
 
 		"End1" call BIS_fnc_endMissionServer;
 	};
+};
+if( isServer && f_param_debugMode == 1) then {
+	spawnPlaneRandomPosition = {
+		_randomPosition = [["area1","area2"]] call BIS_fnc_randomPos;
+		[_randomPosition] execVM "mission\spawnPhantom.sqf";
+	};
+
+	[] spawn spawnPlaneRandomPosition;
 };

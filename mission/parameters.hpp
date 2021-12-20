@@ -89,3 +89,24 @@ class f_param_thirdPerson
 	texts[] = {"No Restriction","In Vehicles Only","First Person Only"};
 	default = 0;
 };
+class f_ParamSpacer_title3
+{
+	title = "---- GAME Options - Difficulty ----";
+	values[] = {-100};
+	texts[] = {" "};
+	default = -100;
+};
+class f_param_flyHeight
+{
+	title = "Difficulty";
+	values[] = {100,150,200,250};
+	texts[] = {"Easiest","Easy","Normal","Hard"};
+	default = 100;
+};
+class f_param_attackLength
+{
+	title = "Estimated attack length after safety timer is off.";
+	values[] = {1,2,3};
+	texts[] = {"15m","30m","45m"};
+	default = 2;
+};

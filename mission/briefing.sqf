@@ -15,9 +15,9 @@ if (side group player != CIVILIAN) then {
 	// The code below creates the execution sub-section of notes.
 	_exe = player createDiaryRecord ["Diary", ["Mission",format["
 	<br/><font size='18' color='#80FF00'>OBJECTIVES</font>
-	<br/>Commander defend the city of Hanoi from incoming phantoms. 
-	<br/>You have 10 minutes to deploy your forces.
-	<br/>Mission should take about one hour.
+	<br/>Commander defend our power plants and wood supply.
+	<br/>We need them to stay warm for christmas. 
+	<br/>You have by default 10 minutes(safety timer) to deploy your forces.
 	<br/>
 	<br/>There are service center around hanoi to rearm,repair and refuel.
 	<br/>Destroyed vehicles spawned back at their beginning position every 10 minutes.
@@ -27,14 +27,16 @@ if (side group player != CIVILIAN) then {
 	<br/>
 	<br/><font size='18' color='#80FF00'>FRIENDLY FORCES</font>
 	<br/>A,B and C platoon  4* AA truck, D  AA Boat, E Medics and CO radar truck.
-	<br/>All truck gunners should have a radio.
+	<br/>
+	<br/>We have turrets available on the docks. You can use these but when they run out of ammo they can't be refilled.
 	<br/>
 	<br/>In order to use the radar truck you have to be in the driver seat.
+	<br/>
 	<br/><font size='18' color='#80FF00'>ENEMY FORCES</font>
 	<br/>Phantoms will be attacking from every direction.
 	<br/>They will be carrying 12*500lb bombs.
 	<br/>
-	<br/>Target of bombing will be a mix off points in hanoi or enemy combatents.
+	<br/>If the pilots eject from the plane. You need to neutralize them.
 	<br/>
 	<br/><font size='18' color='#80FF00'>CREDITS</font>
 	<br/>Created by <font color='#FF0080'>Darkbelg</font color>

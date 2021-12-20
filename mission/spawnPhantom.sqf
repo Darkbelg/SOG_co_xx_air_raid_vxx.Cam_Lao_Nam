@@ -7,7 +7,7 @@ _randomPointX = _randomPosition#0 + (12000 * cos(_randomNumber * 2 * pi));
 _randomPointY = _randomPosition#1 + (12000 * sin(_randomNumber * 2 * pi));
 _planeSpeed = 300;
 
-_randomHeigth = 250;
+_randomHeigth = random [ 100, f_param_flyHeight, 250];
 _spawnPosition = [_randomPointX,_randomPointY,_randomHeigth];
 // _marker = createMarker ["beginPosition",_spawnPosition];
 // _marker setMarkerType "hd_dot";
